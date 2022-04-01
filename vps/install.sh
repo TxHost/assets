@@ -37,11 +37,11 @@ printf "${CYAN} Démarrage de l'instalaltion du serveur VPS!"
     apt update
     apt upgrade -y
     apt install bash curl wget nload htop sudo neofetch -y
-    wget https://raw.githubusercontent.com/TxHost/assets/vps/master/.bashrc 
+    wget https://raw.githubusercontent.com/TxHost/assets/main/vps/.bashrc
     source .bashrc
     cd /etc/
     rm /etc/motd
-    wget https://raw.githubusercontent.com/TxHost/assets/vps/master/motd 
+    wget https://raw.githubusercontent.com/TxHost/assets/main/vps/motd
     source motd
 
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config;systemctl restart ssh
