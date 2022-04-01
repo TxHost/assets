@@ -11,7 +11,7 @@ cat << "EOF"
             
             TxHost © 2021 - 2022                          
 EOF
-supported="Ubuntu (20.04), Debian (10, 11)"
+supported="Debian, Ubuntu"
 COLOR1='\033[0;32m'                                         #green color
 COLOR2='\033[0;31m'                                         #red color
 COLOR3='\33[0;33m'
@@ -40,7 +40,6 @@ printf "${CYAN} Démarrage de l'instalaltion du serveur VPS!"
     wget https://raw.githubusercontent.com/TxHost/assets/main/vps/.bashrc
     source .bashrc
     cd /etc/
-    rm /etc/motd
     wget https://raw.githubusercontent.com/TxHost/assets/main/vps/motd
     source motd
 
