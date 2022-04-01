@@ -46,5 +46,5 @@ printf "${CYAN} Démarrage de l'instalaltion du serveur VPS!"
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config;systemctl restart ssh
 
     printf "${NC}\\n"   
-    printf "${COLOR1}✔️ Installation terminée  [o/N]\\n"
+    printf "${COLOR1}✔️ Installation terminée \\n"
 fi
