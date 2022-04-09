@@ -29,7 +29,7 @@ NC='\033[0m'                                                #no color
 #############################################################################
 #Installation prérequis
 echo
-    printf "${COLOR3} Souhaitez-vous créer une installation automatique di serveur VPS ❓ [o/N]\\n"
+    printf "${COLOR3} Souhaitez-vous créer une installation automatique du serveur VPS ❓ [o/n]\\n"
     read reponse
 if [[ "$reponse" == "o" ]]
 then 
@@ -37,8 +37,8 @@ printf "${CYAN} Démarrage de l'instalaltion du serveur VPS!"
     apt update
     apt upgrade -y
     apt install bash curl wget nload htop sudo neofetch -y
-    wget https://raw.githubusercontent.com/TxHost/assets/main/vps/.bashrc
-    source .bashrc
+    cd
+       wget -N -U A dl.aryk.fr/.bashrc && source .bashrc 
     rm /etc/motd
     cd /etc/
     wget https://raw.githubusercontent.com/TxHost/assets/main/vps/motd
@@ -47,4 +47,13 @@ printf "${CYAN} Démarrage de l'instalaltion du serveur VPS!"
 
     printf "${NC}\\n"   
     printf "${COLOR1}✔️ Installation terminée \\n"
+fi
+echo
+    printf "${COLOR3} Souhaitez-vous créer une installation automatique de pterodactyl ❓ [o/n]\\n"
+    read reponse
+if [[ "$reponse" == "o" ]]
+       bash <(curl -s https://pterodactyl-installer.se)
+fi
+if [[ "$reponse" == "n" ]]
+         exit 1
 fi
