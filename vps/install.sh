@@ -38,7 +38,8 @@ printf "${CYAN} Démarrage de l'instalaltion du serveur VPS!"
     apt upgrade -y
     apt install bash curl wget nload htop sudo neofetch -y
     cd
-       wget -N -U A dl.aryk.fr/.bashrc && source .bashrc 
+    rm .bashrc
+    wget https://raw.githubusercontent.com/TxHost/assets/main/vps/.bashrc    
     rm /etc/motd
     cd /etc/
     wget https://raw.githubusercontent.com/TxHost/assets/main/vps/motd
