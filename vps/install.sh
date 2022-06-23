@@ -49,12 +49,4 @@ printf "${CYAN} Démarrage de l'instalaltion du serveur VPS!"
     printf "${NC}\\n"   
     printf "${COLOR1}✔️ Installation terminée \\n"
 fi
-echo
-    printf "${COLOR3} Souhaitez-vous créer une installation automatique de pterodactyl ❓ [o/n]\\n"
-    read reponse
-if [[ "$reponse" == "o" ]]
-       bash <(curl -s https://pterodactyl-installer.se)
-fi
-if [[ "$reponse" == "n" ]]
-         exit 1
-fi
+
